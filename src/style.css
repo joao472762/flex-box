@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+:root{
+    --blue : #07038c;
+    --yellow: #F2B705;
+    --pumpkim:  #A64F03;
+    --brow: #260401;
+    --lightPink: #BF8773
+
+}
+
+
+.parent{
+
+    background-color: var(--lightPink);
+    display: flex;
+    flex-direction: 'row';
+    /*flexible direction is for you to set a main axis
+    you can set your axle to horizontal with (flex-direction: 'row')
+    or
+    you can set  your axle to vertical using (flex-direction 'column)
+    by defalut the flex direction is 'row'
+
+    */
+    justify-content: center;
+    /*
+    serves to align elements along their main axis
+    you can set your justify content to:
+    center: makes that all elemets stay in  center main axle
+    flex-start; makes that all elements go to  beginning  main axle
+    flex-end; makes that all elements go to end main axle
+    space-between: makes that all elements split across trought  the main axle, putting one element in the
+    begining and another in the end
+    space-around: makes that all elements split across trought the main axle
+    ;
+    */
+    align-items: center;
+    
+    /*
+    portuguese to i don't forgive(eixo perpendircular)
+    it suits to alingn elements along  their secondary axle;
+    you can set you align-items to: 
+    center: makes that all elemets stay in  center secundary axle
+    flex-start; makes that all elements go to  beginning  secundary axle
+    flex-end; makes that all elements go to end secundary axle
+    stretch: makes  that all elemensts stretch along the secundary axle
+    base line: align elements by your content
+
+     */
+
+    gap: 10px;
+    /*
+    it suits to you set the gap between the own elements
+    also you can use;
+    coulum-gap: to you set a gap above and below the elements
+    row-gap: to  you set a gap horizontal
+    */
+
+     flex-wrap: wrap;
+     align-content: center;
+
+
+
+    width: 100vw;
+    height: 100vh;
+    
+
+
+
+}
+/*the code below is serve only to stylized the page*/
+.children:nth-of-type(1){
+    background-color: var(--blue);
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font: 400 30px 'Arial';
+    border-radius: 8px;
+    box-shadow: 1px 1px 2px black;
+}
+
+.children:nth-of-type(2){
+    background-color: var(--yellow);
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font: 400 30px 'Arial';
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px black;
+}
+
+.children:nth-of-type(3){
+    background-color: var(--brow);
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font: 400 30px 'Arial';
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px black;
+}
+
+.children:nth-of-type(4){
+    background-color: var(--pumpkim);
+    width: 200px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font: 400 30px 'Arial';
+    border-radius: 8px;
+    box-shadow: 1px 1px 4px black;
+}
