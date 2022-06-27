@@ -18,11 +18,11 @@
 
     background-color: var(--lightPink);
     display: flex;
-    flex-direction: 'row';
+    flex-direction: row;
     /*flexible direction is for you to set a main axis
-    you can set your axle to horizontal with (flex-direction: 'row')
+    you can set your main axle to horizontal with (flex-direction: 'row')
     or
-    you can set  your axle to vertical using (flex-direction 'column)
+    you can set  your main axle to vertical using (flex-direction 'column)
     by defalut the flex direction is 'row'
 
     */
@@ -41,7 +41,7 @@
     align-items: center;
     
     /*
-    portuguese to i don't forgive(eixo perpendircular)
+    in portuguese, to i don't forgive (eixo perpendircular)
     it suits to alingn elements along  their secondary axle;
     you can set you align-items to: 
     center: makes that all elemets stay in  center secundary axle
@@ -49,23 +49,23 @@
     flex-end; makes that all elements go to end secundary axle
     stretch: makes  that all elemensts stretch along the secundary axle
     base line: align elements by your content
+    by deafault the  align-items is stretch
 
      */
 
-    gap: 10px;
+    
     /*
     it suits to you set the gap between the own elements
     also you can use;
     coulum-gap: to you set a gap above and below the elements
     row-gap: to  you set a gap horizontal
     */
+   
+    flex-wrap: nowrap;
+    row-gap: 20px;
+    column-gap: 20px;
 
-     flex-wrap: wrap;
-     align-content: center;
 
-
-
-    width: 100vw;
     height: 100vh;
     
 
@@ -73,8 +73,12 @@
 
 }
 /*the code below is serve only to stylized the page*/
-.children:nth-of-type(1){
-    background-color: var(--blue);
+
+.children{
+    order: 1;
+    flex-grow: 0;
+    flex-shrink: 1;
+    flex-basis: auto;
     width: 200px;
     height: 100px;
     display: flex;
@@ -86,41 +90,23 @@
     box-shadow: 1px 1px 2px black;
 }
 
-.children:nth-of-type(2){
+.children.bloco01{
+    flex: 0 1 auto;
+    background-color: var(--blue);
+    align-self: flex-start;
+}
+
+.children.bloco02{
+  
     background-color: var(--yellow);
-    width: 200px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font: 400 30px 'Arial';
-    border-radius: 8px;
-    box-shadow: 1px 1px 4px black;
 }
 
-.children:nth-of-type(3){
+.children.bloco03{
+    align-self: flex-end;
     background-color: var(--brow);
-    width: 200px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font: 400 30px 'Arial';
-    border-radius: 8px;
-    box-shadow: 1px 1px 4px black;
 }
 
-.children:nth-of-type(4){
+.children.children.bloco04{
+    
     background-color: var(--pumpkim);
-    width: 200px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    font: 400 30px 'Arial';
-    border-radius: 8px;
-    box-shadow: 1px 1px 4px black;
 }
